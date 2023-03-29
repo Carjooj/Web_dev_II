@@ -4,7 +4,12 @@ const sequelize = new Sequelize("test", "root", "", {
     dialect: "mysql"
 })
 
-const Agendamentos = sequelize.define('agendamentos', {
+module.exports = {
+    Sequelize: Sequelize,
+    sequelize: sequelize
+}
+
+/*const Agendamentos = sequelize.define('agendamentos', {
     nome: {
         type: Sequelize.STRING
     },
@@ -18,8 +23,8 @@ const Agendamentos = sequelize.define('agendamentos', {
         type: Sequelize.DATE
     },
     observacao: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
     }
 })
 
-//Agendamentos.sync({force:true})
+//Agendamentos.sync({force:true})*/
